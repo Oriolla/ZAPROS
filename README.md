@@ -14,5 +14,5 @@ Things you may want to cover:
   * rake db:seed
 
 ~~Services (job queues, cache servers, search engines, etc.)~~
-* All you need is love with Ruby on rails.
+* All you need is love with Ruby on rails (and Rubymine).
 
