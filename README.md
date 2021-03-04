@@ -5,20 +5,14 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.5.0
+* Rake, version 13.0.3
+* Database PG 9.6.18
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
+* Database initialization in /config/database.yml
+* rake db:migrate
+* rake db:seed
 
 * Services (job queues, cache servers, search engines, etc.)
+* All you need is love with Ruby on rails.
 
-* Deployment instructions
-
-* ...
