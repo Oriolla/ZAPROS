@@ -13,6 +13,6 @@ Things you may want to cover:
   * rake db:migrate
   * rake db:seed
 
-~~Services (job queues, cache servers, search engines, etc.)~~
+~~Services (all in Gemfile, etc.)~~
 * All you need is love with Ruby on rails (and Rubymine).
 
