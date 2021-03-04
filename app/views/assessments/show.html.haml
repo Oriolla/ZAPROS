@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @assessment.name
+%p
+  %b Criteria:
+  = @assessment.criteria_id
+%p
+  %b Rang:
+  = @assessment.rang
+
+= link_to 'Edit', edit_assessment_path(@assessment)
+\|
+= link_to 'Back', assessments_path

@@ -1,0 +1,29 @@
+- provide(:title, "Работа с ЗАПРОС")
+
+%p
+  = "#{@criteria_count} сравнений критериев осталось"
+  %br
+  = "Session counter: #{session[:counter]}"
+%p
+  %h3
+    = "В Учебном заведении за этот год созданы две работы. Выберите какие критерии в работе важнее?"
+
+-# data: {remote: true}, :format => "js"
+%form{action:"ask/update_request", :controller => "/ask", }
+  .field
+    .radio
+      %label
+        %input{name: "decision", type: "radio", value: "assessment1", :checked => false}
+          "#{@assessment11.name} , #{@assessment12.name}"
+  .field
+    .radio
+      %label
+        %input{name: "decision", type: "radio", value: "assessment2", :checked => false}
+          "#{@assessment21.name} , #{@assessment22.name}"
+  .field
+    .radio
+      %label
+        %input{name: "decision", type: "radio", value: "same", :checked => false}
+          "Все равно"
+  %input{type:"submit", value:"Сохранить решение"}
+

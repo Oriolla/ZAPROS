@@ -1,0 +1,37 @@
+%header.navbar.navbar-fixed-top.navbar-inverse
+  .container.header
+    .container
+      = link_to t(".logo_title"), root_path, id: "logo"
+      .rails_logo
+        = link_to image_tag("rails.png", alt: "Rails logo")
+
+        %p.locale
+          = link_to image_tag("Russia.jpg", alt: "",  style: "width: 10%; height: 10%", title: "Русский" ), locale: :ru
+          = link_to image_tag("United_Kingdom.jpg", alt: "",  style: "width: 12%; height: 12%", title: "English"), locale: :en
+          %b
+            = I18n.locale
+
+
+    .container
+      %nav
+        %ul.nav.navbar-nav.pull-right
+          = render :partial =>'shared/menu', :locals => { :info => is_exist_info(@info) }
+          -#- if signed_in?
+          -#  -#%li= link_to "Users", '#'
+          -#  %li.logged
+          -#    #{current_user.email}
+          -#  = gravatar_for current_user
+          -#  %li#fat-menu.dropdown
+          -#    %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+          -#      %p
+          -#        = t('.person')
+          -#        %b.caret
+          -#    %ul.dropdown-menu
+          -#      %li= link_to t('.profile'), current_user
+          -#      %li= link_to t('.settings'), '#'
+          -#      %li.divider
+          -#      %li
+          -#        = link_to t('.sign_out'), signout_path, method: "delete"
+          -#- else
+          -#  %li= link_to t('.sign_in'), signin_path
+

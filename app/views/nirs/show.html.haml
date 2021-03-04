@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @nir.name
+%p
+  %b University:
+  = @nir.university_id
+%p
+  %b Assessment1:
+  = @nir.assessment1_id
+%p
+  %b Assessment2:
+  = @nir.assessment2_id
+%p
+  %b Assessment3:
+  = @nir.assessment3_id
+%p
+  %b V:
+  = @nir.v
+
+= link_to 'Edit', edit_nir_path(@nir)
+\|
+= link_to 'Back', nirs_path

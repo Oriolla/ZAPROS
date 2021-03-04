@@ -1,0 +1,106 @@
+ru:
+  hello: "Привет, мир"
+
+
+
+  shared:
+    menu:
+      home: "Главная"
+      help: "Помощь"
+      contact: "Контакты"
+      about: "О сайте"
+    header:
+      logo_title: "Проект на Ruby_on_Rails"
+      home: "Главная"
+      help: "Помощь"
+      sign_in: "Войти"
+      sign_out: "Выйти"
+      person: "Я"
+      profile: "Моя страница"
+      settings: "Настройки"
+    #      logged_msg: "Вошел как "
+
+    footer:
+      about: "О сайте"
+      contact: "Контакты"
+      dev_msg: "Сайт в разработке"
+
+  sessions:
+    new:
+      sign_in: "Войти"
+      sign_up: "Зарегистрироваться"
+      email: "E-mail"
+      password: "Пароль"
+      new_user?: "Новый пользователь?"
+
+
+  users:
+    form:
+      name: "Имя"
+      email: "E-mail"
+      password: "Пароль"
+      password_confirmation: "Подтверждение пароля"
+      #      confirmation: "Подтверждение"
+      create_account: "Создать мой аккаунт"
+
+    new:
+      new_user_sign_up: "Регистрация нового пользователя"
+      back: "Назад"
+
+    show:
+      work: "Экспертиза"
+      email: "Email"
+
+  work:
+
+    index:
+      def_select_theme: "Выберите тему для оценки"
+
+    button_theme_select:
+      select_theme_bt: "выбрать тему"
+
+
+    button_list_results:
+      results_list: "результаты"
+
+    choose_theme_from_arr:
+      select_theme: "выберите тему"
+
+    images:
+      common_value: "средняя оценка"
+      total_values: "всего оценок"
+
+      make_decision: "Выберите свою оценку"
+      save_decision: "сохранить"
+
+      share_opinion: "Поделись своим мнением"
+
+
+      # titles
+      theme_name: "Тема"
+
+    display_theme:
+      select_theme: "Выберите тему для оценки"
+
+
+    results_list:
+      no_values: "Результаты по выбранной теме отсутствуют..."
+      select_theme: "Выберите другую тему"
+      return_to_main: "На главную"
+
+      # titles
+      page_title: "Перейдите к выбору темы"
+
+
+
+  welcome:
+    index:
+      title: "ЗАПРОС I"
+      sign_up: "Регистрация"
+    about:
+      about_title: "О сайте"
+
+    contacts:
+      contacts_title: "Контакты"
+
+

@@ -1,0 +1,12 @@
+- content_for(:title,  "Index")
+
+.center.jumbotron
+  %h1
+    =t('.title')
+
+  -#- if signed_in?
+  -#  = link_to "Proceed to work!", work_path, class: "btn btn-lg btn-primary"
+  -#- else
+  -#  = link_to t('.sign_up'), signup_path, class: "btn btn-lg btn-primary"
+  %br
+  = link_to 'DOC TODO 1','https://docs.google.com/document/d/10VCewLAF2iICjI4j6udS_iwhgmi6gGgL1bXIGIhkCNQ/edit'

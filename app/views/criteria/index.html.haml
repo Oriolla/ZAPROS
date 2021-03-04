@@ -1,0 +1,21 @@
+%h1 Критерии для оценивания научных работ
+
+%table.table.table-bordered
+  %thead
+    %tr
+      %th Name
+      %th
+      %th
+      %th
+
+  %tbody
+    - @criteria.each do |criterium|
+      %tr
+        %td= "#{criterium.id}. #{criterium.name}"
+        %td= link_to fa_icon('eye'), criterium
+        %td= link_to fa_icon('pencil'), edit_criterium_path(criterium)
+        %td= link_to fa_icon('trash-o'), criterium, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Criterium', new_criterium_path

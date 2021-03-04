@@ -1,0 +1,26 @@
+%footer.footer
+  -#%p Experteese
+    -#{style: " display:inline-block; font-size: 1em"}
+    -#2016
+  -#%small
+  -#  The
+  -#  %a{:href => "http://www.railstutorial.org/"} Ruby on Rails Tutorial
+  -#  by
+  -#  %a{:href => "http://www.michaelhartl.com/"} Michael Hartl
+  %h3{style: "color: #c4f7ff; font-size: 1.3em; position: relative; left: 20%; margin-top: .55em;"}
+    Experteese
+    %i.fa.fa-copyright.iconsMain{ style: " font-size: 1.3em; " }
+    2016
+    %p.app_notice_dev{style: " font-size: 1em; position: relative; left: 40%;"}
+      %span{ style: "color: #730E15; font-size: 1.3em; position: relative; left: 11%;" }
+        %i.fa.fa-flag.iconsMain{ style: "color: #efe3ff; font-size: .5em; " }
+          = t('.dev_msg')
+
+
+  .footer_menu
+    %nav
+      %ul
+        %li= link_to t('.about'), about_path
+        %li= link_to t('.contact'), contacts_path
+        -#%li
+        -#  %a{:href => "http://news.railstutorial.org/"} News

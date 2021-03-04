@@ -1,0 +1,28 @@
+= form_for @nir do |f|
+  - if @nir.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@nir.errors.count, "error")} prohibited this nir from being saved:"
+      %ul
+        - @nir.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :university_id
+    = f.number_field :university_id
+  .field
+    = f.label :assessment1_id
+    = f.number_field :assessment1_id
+  .field
+    = f.label :assessment2_id
+    = f.number_field :assessment2_id
+  .field
+    = f.label :assessment3_id
+    = f.number_field :assessment3_id
+  .field
+    = f.label :v
+    = f.text_field :v
+  .actions
+    = f.submit 'Save'

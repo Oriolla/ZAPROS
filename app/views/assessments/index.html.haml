@@ -1,0 +1,29 @@
+%h1 Оценки критериев с их рангами
+.field_button
+  %button.btn.btn-green.save{:title => "Новый ЗАПРОС", type: "submit"}
+    %a{:format => "js", :href => "requests/epsh", :title => "Save image diag results"}
+      = "Проставить ранги"
+.intpol3
+%table.table.table-bordered
+  %thead
+    %tr
+      %th Name
+      %th Criteria
+      %th Rang
+      %th
+      %th
+      %th
+
+  %tbody
+    - @assessments.each do |assessment|
+      %tr
+        %td= "#{assessment.id}. #{assessment.name}"
+        %td= "#{assessment.criteria_id} => #{assessment.criteria.name}"
+        %td= assessment.rang
+        %td= link_to fa_icon('eye'), assessment
+        %td= link_to fa_icon('pencil'), edit_assessment_path(assessment)
+        %td= link_to fa_icon('trash-o'), assessment, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Assessment', new_assessment_path

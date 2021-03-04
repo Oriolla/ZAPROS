@@ -1,0 +1,19 @@
+= form_for @two_criterium do |f|
+  - if @two_criterium.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@two_criterium.errors.count, "error")} prohibited this two_criterium from being saved:"
+      %ul
+        - @two_criterium.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :criteria1_id
+    = f.number_field :criteria1_id
+  .field
+    = f.label :criteria2_id
+    = f.number_field :criteria2_id
+  .field
+    = f.label :uses
+    = f.check_box :uses
+  .actions
+    = f.submit 'Save'

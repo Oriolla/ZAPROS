@@ -1,0 +1,35 @@
+%h1 История ответов пользователя
+.field_button
+  %button.btn.btn-blue.save{:title => "Новый ЗАПРОС", type: "submit"}
+    %a{:format => "js", :href => "requests/destroy_all", :title => "Save image diag results"}
+      = "Новый ЗАПРОС"
+
+%table.table.table-bordered
+  %thead
+    %tr
+      %th ID
+      %th Оценка 11
+      %th Оценка 12
+      %th Оценка 21
+      %th Оценка 22
+      %th Ответ
+      %th
+      %th
+      %th
+
+  %tbody
+    - @requests.each do |request|
+      %tr
+        %td= "#{request.id}"
+        %td= "#{request.assessment11_id} => #{request.assessment11.name}"
+        %td= "#{request.assessment12_id} => #{request.assessment12.name}"
+        %td= "#{request.assessment21_id} => #{request.assessment21.name}"
+        %td= "#{request.assessment22_id} => #{request.assessment22.name}"
+        %td= request.ans
+        %td= link_to fa_icon('eye'), request
+        %td= link_to fa_icon('pencil'), edit_request_path(request)
+        %td= link_to fa_icon('trash-o'), request, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Request', new_request_path

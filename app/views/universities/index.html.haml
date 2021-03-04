@@ -1,0 +1,21 @@
+%h1 Listing universities
+
+%table.table.table-bordered
+  %thead
+    %tr
+      %th Name
+      %th
+      %th
+      %th
+
+  %tbody
+    - @universities.each do |university|
+      %tr
+        %td= university.name
+        %td= link_to fa_icon('eye'), university
+        %td= link_to fa_icon('pencil'), edit_university_path(university)
+        %td= link_to fa_icon('trash-o'), university, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New University', new_university_path

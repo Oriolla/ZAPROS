@@ -1,0 +1,590 @@
+@import "mixins"
+
+
+// Place all the styles related to the images controller here.
+// They will automatically be included in application.css.
+// You can use Sass here: http://sass-lang.com/
+
+
+i
+  height: 1.5em
+  font-size: 1.5em
+  cursor: pointer
+
+i:hover:not(:disabled)
+  color: $image-display-fon
+
+@import url(https://fonts.googleapis.com/css?family=Poiret+One)
+
+@mixin button-bg($bg)
+  background: $bg
+  &:hover
+    background: darken($bg,15%)
+    transition: all 0.3s ease
+
+  &:active
+    background: darken($bg,25%)
+
+
+
+.btn
+  margin: auto
+  color: #fff
+  display: inline-block
+  text-decoration: none
+  padding: 5px 10px
+  border-radius: 3px
+  font-family: 'Poiret One', cursive
+  font-size: 1.3em
+  cursor: pointer
+
+.btn a
+  color: white
+  text-decoration: none
+  text-transform: uppercase
+  cursor: pointer
+
+
+.btn-green
+  @include button-bg(#2ecc71)
+
+
+.btn-blue
+  @include button-bg(#3498db)
+
+.field_button
+  display: block
+  position: relative
+  margin: auto
+  width: 800px
+  text-align: center
+  cursor: pointer
+
+/*Other Stylez*/
+.wrap
+  margin: 0 auto
+  width: 800px
+  text-align: center
+
+
+h1
+  font-size: 2em
+
+
+
+.image
+  //margin-top: 2.05%
+  $img-small-height: 1.1em
+
+  //@clearfix
+  //+outer-container(100%)
+
+  .brainlook
+    color: $spamItBack
+    text-align: center
+    position: relative
+    bottom: -1em
+    height: 2em
+    font-size: 1em
+
+    p.share
+      font-size: .9em
+
+
+
+  .left_controls
+    // @include span-columns(4)
+    border: solid 1px $image-display-fon
+    display: block
+    background: $image-display-fon
+    color: $gray-darker
+    height: 45em
+    width: 100%
+    margin-top: 2em
+
+
+
+    span.common_value, .total_values
+      text-align: center
+      position: relative
+      //left: 15%
+      color: $topHeadBack
+      font-size: 1.4em
+      font-weight: bold
+      top: 4em
+      display: none
+      height: 3em
+
+      h2
+        border-radius: $radius-button
+        text-align: center
+        color: #ffffff
+        font-weight: bold
+        font-size: large
+        display: inline-block
+
+
+      h2.common
+        width: 45px
+        padding-top: 10px
+        padding-bottom: 10px
+        background-color: $purpleBack
+    span.total_values
+      display: block
+
+      h2.total
+        width: inherit //45px
+        padding: 10px
+        background-color: $emeraldBack
+
+
+
+    input.load_image
+      color: $gray-darker
+
+    select#theme
+      margin-bottom: 10px
+
+    .select_theme
+      display: block
+      height: 6em
+      margin-top: 9em
+
+      .form_select
+        display: block
+        color: $topHeadBack
+        width: 80%
+        height: 6em
+        position: relative
+        text-align: center
+        left: 11%
+        font-family: $helvetica
+        font-size: 1.5em
+        //margin-top: 1em
+
+        input
+          color: $topHeadBack
+          background: $button-bg
+          padding: 0
+          font-size: .9em
+          height: 1.5em
+          -webkit-transition: background-color 0.3s ease-in-out
+          -moz-transition: background-color 0.3s ease-in-out
+          -o-transition: background-color 0.3s ease-in-out
+          transition: background-color 0.3s ease-in-out
+          cursor: pointer
+
+    .select_image
+      display: block
+      height: 10em
+      margin-top: .1em
+
+      .form_select
+        display: block
+        color: $topHeadBack
+        width: 80%
+        height: 5.5em
+        position: relative
+        text-align: center
+        left: 11%
+        font-family: $helvetica
+        font-size: 1.5em
+        margin-top: 2.5em
+
+        input
+          color: $topHeadBack
+          background: $button-bg
+          padding: 0
+          font-size: .9em
+          height: 1.5em
+          -webkit-transition: background-color 0.3s ease-in-out
+          -moz-transition: background-color 0.3s ease-in-out
+          -o-transition: background-color 0.3s ease-in-out
+          transition: background-color 0.3s ease-in-out
+          cursor: pointer
+
+
+    .image_input_form
+      height: 18em
+      font-size: 1.5em
+      color: $topHeadBack
+      display: block
+      position: relative
+      width: 80%
+      text-align: center
+      left: 11%
+      margin-top: 1.5em
+
+      input
+        color: $topHeadBack
+        background-color: $button-bg
+        padding: 0
+        font-size: .9em
+        height: 1.5em
+        -webkit-transition: background-color 0.3s ease-in-out
+        -moz-transition: background-color 0.3s ease-in-out
+        -o-transition: background-color 0.3s ease-in-out
+        transition: background-color 0.3s ease-in-out
+        cursor: text
+
+
+      .file_url
+        padding: 0
+        position: relative
+        margin-bottom: 1.15em
+        opacity: 0.4
+
+        input
+          background-color: $image-display-fon
+
+      .file_url:hover
+        opacity: 1
+
+        input[type="text"]:hover
+          border: 1px solid $image-display-fon
+
+      .file_device
+        padding: 0
+        position: relative
+        opacity: 0.4
+
+        input
+          background-color: $button-bg
+      .file_device:hover
+        opacity: 1
+
+
+      .button__choose input
+        background-color: $gray-light
+        cursor: pointer
+
+
+    .select_image_hide
+      display: none
+
+    a
+      //-webkit-appearance: button
+      //-moz-appearance: button
+      //appearance: button
+      text-shadow: 0 0px 0px $lightBlueBack
+      text-decoration: none
+      color: $topHeadBack
+
+
+  .image_display
+    //@include span-columns(8)
+    //@include outer-container(100%)
+    position: relative
+    margin: 0 0 0px 0
+    height: 45em
+    border: none
+    background: $image-display-fon
+    color: gray
+    margin-top: 2em
+
+
+    h2.up-theme
+      font-family: $helvetica
+      text-align: center
+      color: $topHeadBack
+      margin: 10px
+      cursor: default
+      height: 2.1em
+      font-size: 2em
+
+    h2.up
+      font-family: $helvetica
+      text-align: left
+      color: $purpleBack
+      //margin: 10px
+      cursor: default
+      //height: 2em
+      position: relative
+      left: 8%
+      width: 82%
+      margin-top: 15px
+      margin-bottom: 5px
+      margin-left: 5px
+      margin-right: 5px
+      font-size: 1.6em
+
+    .img-left-side
+      display: none
+      margin-left: 1.35em
+      //@include span-columns(2)
+      //position: relative
+      //height: 300px
+      //float: left
+    h3
+      color: $purpleBack
+      text-align: center
+      text-shadow: $purpleBack
+      font-size: 2.6em
+
+    .img-right-side
+      display: none
+      margin-left: -70%
+
+    @-webkit-keyframes fadeIn
+      from
+        opacity: 0.3
+      to
+        opacity: 1
+
+    @keyframes fadeIn
+      from
+        opacity: 0.3
+      to
+        opacity: 1
+
+    @-webkit-keyframes displayIn
+      from
+        display: none
+      to
+        display: block
+
+    @keyframes displayIn
+      from
+        display: none
+      to
+        display: block
+
+
+    .img-center
+      display: block
+      -webkit-animation: fadeIn 1s
+      animation: fadeIn 1s
+
+      //visibility: hidden
+      opacity: 1
+      //transition: opacity 1s ease-in-out
+      //-webkit-transition: opacity 1s /* For Safari 3.1 to 6.0 */
+      //transition-property: all
+      //transition-duration: 2s
+      //transition-timing-function: linear
+      //transition-delay: 1s
+
+      //@include span-columns(8)
+      position: relative
+      //float: left
+      text-align: center
+      object-fit: fill
+      height: 34em
+
+      .img-title
+        display: none
+
+    //img
+      //display: block
+      //-webkit-animation: displayIn .5s
+      //animation: displayIn .5s
+
+
+    .image_user_value
+      text-align: center
+      color: #ffffff
+      font-weight: bold
+      font-size: large
+      padding-top: .7em
+      //padding-bottom: 10px
+      display: none
+      left: 45%
+      top: -5%
+      //border: 25px solid #ECEBFA   ///////////////////////// 30px solid rgb(48, 250, 41)
+      background-color: $redBack
+      width: 47px   /////////////////////////
+      height: 47px /////////////////////////
+      border-radius: 22px   /////////////////////////
+      //-webkit-animation: turning_cw 5s infinite
+      //-moz-animation: turning_cw 5s infinite
+      //animation: turning_cw 5s infinite
+      position: relative   /////////////////////////
+
+      &:hover
+        -webkit-box-shadow: 0 0 40px 15px $purpleBack
+        -moz-box-shadow: 0 0 40px 15px $purpleBack
+        box-shadow: 0 0 40px 15px $purpleBack
+
+
+    //.outer-circle_left
+
+    //.indic-circ.show
+    //  +clearfix
+    //  display: block
+    //  border-radius: 30px
+    //  border: 30px solid #30fa29
+    //  left: 43.75%
+    //width: 30px   /////////////////////////
+    //height: 30px
+    //position: relative
+
+
+    .image_diag
+      display: none
+      position: relative
+      border: solid 1px $image-display-fon
+      background: $image-display-fon
+      height: 8.6em
+      color: $redBack
+      text-align: center
+      font-family: $helvetica
+      top: 3.65em
+
+      .indicator
+        background: $image-display-fon
+        text-align: center
+
+        .outer-circle
+          display: none
+          left: 10.5%
+          border: 25px solid $image-display-fon
+          width: 30px
+          height: 30px
+          border-radius: $radius-button
+          position: relative
+
+          &:hover
+            -webkit-box-shadow: 0 0 30px 15px $topHeadBack
+            -moz-box-shadow: 0 0 30px 15px $topHeadBack
+            box-shadow: 0 0 30px 15px $topHeadBack
+
+        .outer-circle.show
+          display: block
+          border-radius: $radius-button
+          border: 30px solid $yayBack
+          left: 43.75%
+
+
+      h2.down
+        font-family: $helvetica
+        color: $topHeadBack
+        display: block
+        font-size: 2em
+        margin-left: 1em
+        margin-bottom: 0
+        float: left
+        margin-top: .85em
+
+      .scale
+        display: none
+        width: 100%
+        background-color: $gray-light
+        line-height: .1em //$img-small-height
+        position: relative
+        top: .9em
+        background: linear-gradient(to right, rgba(165, 48, 170, 0.87), rgba(199, 199, 0, 0.39), rgba(41, 214, 155, 0.85))
+
+        .small_img_box
+          display: block
+          width: 1.35em
+          height: 100%
+          left: 20.75%
+          vertical-align: top
+          background-color: $image-display-fon
+          position: relative
+          padding: 0
+          margin: 0
+          %img
+            display: none
+            vertical-align: top
+            width: 100%
+            height: 100%
+            line-height: $img-small-height
+            padding: 0
+            margin: 0
+
+
+//.modal_list_results
+//  display: block
+//  //position: absolute
+//  height: 10em
+//  //margin-top: 1em
+
+//#overlay_m
+//  visibility: hidden
+//  position: absolute
+//  left: 0px
+//  top: 0px
+//  width: 100%
+//  height: 100%
+//  text-align: center
+//  z-index: 1000
+//  h2
+//    color: #000099
+//    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif
+//    font-size: 2em
+
+
+.results_list
+  position: relative
+  margin-top: .7em
+  margin-bottom: auto
+  margin-left: auto
+  margin-right: auto
+  padding: .4em
+  color: $topHeadBack
+  width: 95%
+  background-color: $image-display-fon
+  box-shadow: 0 0 10px 1px rgba(79, 130, 128, 0.1)
+  border: 1px solid $image-display-fon
+  border-radius: $radius-button
+  h2
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif
+    font-size: 2.3em
+
+  nav span
+    font-size: 1.3em
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif
+    text-shadow: 1px 1px 13px $topHeadBack
+
+a.btn.btn-lg.btn-primary
+  margin-left: 1.7em
+  margin-top: 1em
+
+
+.next ,.last , .page, .prev, .first
+  a
+    color: $topHeadBack
+  a:visited
+    color: $topHeadBack
+
+.pagination
+  position: relative
+  display: inline-block
+  text-align: center
+  margin: auto
+  font-size: 1.5em
+
+
+table
+  border-collapse: collapse
+  margin: 0.75em 1.5em
+  //table-layout: auto //fixed; */
+  width: 95%
+  position: relative
+  left: 3%
+  tr > td
+    margin-top: 2.1em
+
+  tbody
+    margin-left: 0.5em
+    margin-right: 0.5em
+
+
+
+tr:nth-child(even)
+  background-color: #f7f7f7
+
+tr.one_row > td
+  padding-bottom: 1em
+  font-size: 1.5em
+
+th
+  text-align: center
+  background-color: rgba(196, 202, 213, 0.51)
+  //width: 75em
+td
+    font-size: 1em
+
+//th.name
+//  width: 14em

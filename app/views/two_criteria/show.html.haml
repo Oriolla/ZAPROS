@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Criteria1:
+  = @two_criterium.criteria1_id
+%p
+  %b Criteria2:
+  = @two_criterium.criteria2_id
+%p
+  %b Uses:
+  = @two_criterium.uses
+
+= link_to 'Edit', edit_two_criterium_path(@two_criterium)
+\|
+= link_to 'Back', two_criteria_path

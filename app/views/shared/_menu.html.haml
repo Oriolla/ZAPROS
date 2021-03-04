@@ -1,0 +1,21 @@
+- @menu = { '0'=>{'title'=> t('.home'), 'path'=> "/", "children"=>{'0'=>{'title'=> "Главная2", 'path'=> "/"}}} ,
+'1'=>{'title'=> "Пары критериев", 'path'=> "/two_criteria"},
+'2'=>{'title'=> "Критерии", 'path'=> "/criteria"},
+'3'=>{'title'=> "Научные работы", 'path'=> "/nirs"},
+'4'=>{'title'=> "История ЗАПРОС", 'path'=> "/requests"},
+'5'=>{'title'=> "Оценки", 'path'=> "/assessments"},}
+
+-# '3'=>{'title'=> t('.contact'), 'path'=> "/main/contacts"},
+-# '4'=>{'title'=> t('.about'), 'path'=> "/main/about"}
+
+- @menu.each do |key, value|
+  - if value['title'] == @info
+    .current
+    %li= link_to value['title'], value['path']
+  - else
+    %li= link_to value['title'], value['path']
+
+-# menu_tag(@menu)
+/  - attributes[:class] = "one two"
+/  - node["title"]
+/

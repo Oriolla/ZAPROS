@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Assessment11:
+  = @request.assessment11_id
+%p
+  %b Assessment12:
+  = @request.assessment12_id
+%p
+  %b Assessment21:
+  = @request.assessment21_id
+%p
+  %b Assessment22:
+  = @request.assessment22_id
+%p
+  %b Ans:
+  = @request.ans
+
+= link_to 'Edit', edit_request_path(@request)
+\|
+= link_to 'Back', requests_path

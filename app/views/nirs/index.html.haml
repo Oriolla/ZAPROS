@@ -1,0 +1,31 @@
+%h1 Работы научных организаций
+
+%table.table.table-bordered
+  %thead
+    %tr
+      %th Название
+      %th Научная организация
+      %th Критерий_1
+      %th Критерий_2
+      %th Критерий_3
+      %th V(a)
+      %th
+      %th
+      %th
+
+  %tbody
+    - @nirs.each do |nir|
+      %tr
+        %td= nir.name
+        %td= "#{nir.university_id} => #{nir.university.name}"
+        %td= "#{nir.assessment1_id} => #{nir.assessment1.name} r(#{nir.assessment1.rang})"
+        %td= "#{nir.assessment2_id} => #{nir.assessment2.name} r(#{nir.assessment2.rang})"
+        %td= "#{nir.assessment3_id} => #{nir.assessment3.name} r(#{nir.assessment3.rang})"
+        %td= nir.v
+        %td= link_to fa_icon('eye'), nir
+        %td= link_to fa_icon('pencil'), edit_nir_path(nir)
+        %td= link_to fa_icon('trash-o'), nir, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Nir', new_nir_path

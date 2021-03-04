@@ -1,0 +1,107 @@
+en:
+  hello: "Hello world"
+
+
+
+  shared:
+    menu:
+      home: "Home"
+      help: "Help"
+      contact: "Contacts"
+      about: "About"
+
+    header:
+      logo_title: "Project in Ruby_on_Rails"
+      home: "Home"
+      help: "Help"
+      sign_in: "Sign in"
+      sign_out: "Sign out"
+      person: "Me"
+      profile: "My page"
+      settings: "Settings"
+    #      logged_msg: "Logged in as "
+
+    footer:
+      about: "About"
+      contact: "Contacts"
+      dev_msg: "App is in Development"
+
+  sessions:
+    new:
+      sign_in: "Sign in"
+      sign_up: "Sign up"
+      email: "E-mail"
+      password: "Password"
+      new_user?: "New user?"
+
+  users:
+    form:
+      name: "Name"
+      email: "E-mail"
+      password: "Password"
+      password_confirmation: "Password confirmation"
+      #      confirmation: "Подтверждение"
+      create_account: "Create my account"
+
+    new:
+      new_user_sign_up: "New user sign up"
+      back: "Back"
+
+
+    show:
+      work: "Proceed to work"
+      email: "Email"
+
+  work:
+
+    index:
+      def_select_theme: "Select theme to leave your answer"
+
+
+    button_theme_select:
+      select_theme_bt: "select theme"
+
+    button_list_results:
+      results_list: "list results"
+
+    choose_theme_from_arr:
+      select_theme: "select theme ar"
+
+    choose_theme:
+      select_theme: "select theme ch"
+
+    images:
+      common_value: "common value"
+      total_values: "total values"
+
+      make_decision: "Make your decision"
+      save_decision: "save"
+
+      share_opinion: "Share your opinion"
+
+
+      # titles
+      theme_name: "Theme name"
+
+    display_theme:
+      select_theme: "Select theme"
+
+
+    results_list:
+      no_values: "No Values results for selected theme..."
+      select_theme: "Select other theme"
+      return_to_main: "Return to main"
+
+      # titles
+      page_title: "Go to work area"
+
+
+  welcome:
+    index:
+      title: "ZAPROS I"
+      sign_up: "Sign up now!"
+    about:
+      about_title: "About"
+
+    contacts:
+      contacts_title: "Contacts"

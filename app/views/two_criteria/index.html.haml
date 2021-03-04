@@ -1,0 +1,27 @@
+%h1 Listing two_criteria
+
+%table.table.table-bordered
+  %thead
+    %tr
+      %th ID
+      %th Criteria1
+      %th Criteria2
+      %th Uses
+      %th
+      %th
+      %th
+
+  %tbody
+    - @two_criteria.each do |two_criterium|
+      %tr
+        %td= "#{two_criterium.id}"
+        %td= "#{two_criterium.criteria1_id} #{two_criterium.criteria1.name}"
+        %td= "#{two_criterium.criteria2_id} #{two_criterium.criteria2.name}"
+        %td= two_criterium.uses
+        %td= link_to fa_icon('eye'), two_criterium
+        %td= link_to fa_icon('pencil'), edit_two_criterium_path(two_criterium)
+        %td= link_to fa_icon('trash-o'), two_criterium, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Two criterium', new_two_criterium_path
